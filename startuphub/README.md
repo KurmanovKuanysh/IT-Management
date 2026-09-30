@@ -77,3 +77,15 @@ src/styles/tokens.css   цвета, радиусы, тени, тёмная те�
 4. Publish → стартап появился в каталоге. Edit → изменения видны на странице.
 5. Выйти, войти как admin@startuphub.local → Admin → Hide стартап → он пропал из каталога;
    вкладка Users → Block пользователя → он больше не может войти.
+
+## Деплой (Vercel + Neon, бесплатно)
+
+1. vercel.com → Add New → Project → импортировать репозиторий, **Root Directory: `startuphub`**.
+2. В проекте: Storage → Create Database → **Neon** → Connect. Интеграция сама добавит
+   `DATABASE_URL` и `DATABASE_URL_UNPOOLED`.
+3. Settings → Environment Variables → добавить `JWT_SECRET` (случайная строка 32+ символов).
+4. Deploy. Скрипт `vercel-build` сам применяет миграции (`prisma migrate deploy`).
+5. Демо-данные в прод-базу — один раз с локальной машины (строки из Vercel → Storage → Neon):
+   ```bash
+   DATABASE_URL="<pooled>" DATABASE_URL_UNPOOLED="<unpooled>" SEED_ADMIN_PASSWORD="<свой пароль>" npm run db:seed
+   ```
