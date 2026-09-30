@@ -1,0 +1,16 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# AI-ассистенты
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.cursor/
+.aider*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
