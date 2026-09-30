@@ -1,42 +1,44 @@
 /*
  * Дизайн-токены StartupHub — единственное место, где задаются цвета, радиусы,
  * тени и шрифты. Страницы и компоненты используют только эти токены
- * (через Tailwind-классы bg-surface, text-muted, rounded-card и т. д.),
+ * (через Tailwind-классы, см. app/globals.css: bg-surface, text-muted, rounded-card и т. д.),
  * поэтому дизайнер меняет внешний вид сайта, не трогая логику.
  */
 :root {
-  --color-bg: #f7f7fb;
-  --color-surface: #ffffff;
-  --color-surface-muted: #f1f1f6;
-  --color-border: #e3e3ec;
-  --color-text: #16161d;
-  --color-text-muted: #62627a;
-  --color-primary: #4f46e5;
-  --color-primary-hover: #4338ca;
-  --color-primary-fg: #ffffff;
-  --color-danger: #dc2626;
-  --color-success: #16a34a;
-  --color-focus: #818cf8;
+  --sh-color-bg: #f7f7fb;
+  --sh-color-surface: #ffffff;
+  --sh-color-surface-muted: #f1f1f6;
+  --sh-color-border: #e3e3ec;
+  --sh-color-text: #16161d;
+  --sh-color-text-muted: #62627a;
+  --sh-color-primary: #4f46e5;
+  --sh-color-primary-hover: #4338ca;
+  --sh-color-primary-fg: #ffffff;
+  --sh-color-danger: #dc2626;
+  --sh-color-success: #16a34a;
+  --sh-color-warning: #b45309;
+  --sh-color-focus: #818cf8;
 
-  --radius-control: 0.5rem;
-  --radius-card: 0.875rem;
-  --shadow-card: 0 1px 2px rgb(16 16 29 / 0.04), 0 4px 16px rgb(16 16 29 / 0.06);
+  --sh-radius-control: 0.5rem;
+  --sh-radius-card: 0.875rem;
+  --sh-shadow-card: 0 1px 2px rgb(16 16 29 / 0.04), 0 4px 16px rgb(16 16 29 / 0.06);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0e0e14;
-    --color-surface: #17171f;
-    --color-surface-muted: #20202b;
-    --color-border: #2c2c3a;
-    --color-text: #ededf3;
-    --color-text-muted: #9b9bb0;
-    --color-primary: #818cf8;
-    --color-primary-hover: #a5b4fc;
-    --color-primary-fg: #0e0e14;
-    --color-danger: #f87171;
-    --color-success: #4ade80;
-    --color-focus: #a5b4fc;
-    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3);
+    --sh-color-bg: #0e0e14;
+    --sh-color-surface: #17171f;
+    --sh-color-surface-muted: #20202b;
+    --sh-color-border: #2c2c3a;
+    --sh-color-text: #ededf3;
+    --sh-color-text-muted: #9b9bb0;
+    --sh-color-primary: #818cf8;
+    --sh-color-primary-hover: #a5b4fc;
+    --sh-color-primary-fg: #0e0e14;
+    --sh-color-danger: #f87171;
+    --sh-color-success: #4ade80;
+    --sh-color-warning: #fbbf24;
+    --sh-color-focus: #a5b4fc;
+    --sh-shadow-card: 0 1px 2px rgb(0 0 0 / 0.3);
   }
 }
